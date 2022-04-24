@@ -1,0 +1,71 @@
+body {
+  word-wrap: break-word;
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.text {
+  font-family: 'Reenie Beanie';
+  font-size: 2rem;
+  max-width: auto;
+  text-align: justify;
+  text-decoration: none;
+}
+
+.note {
+  margin-top: 0.5em;
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  /* font-family: 'Reenie Beanie'; */
+  font-size: 2rem;
+}
+
+.note:hover,
+.note:focus {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+  transform: scale(1.01);
+  position: relative;
+  z-index: 5;
+}
+
+.note {
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  display: block;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  transition: transform .15s linear;
+}
+
+.note:nth-child(even) a {
+  position: relative;
+  top: 5px;
+  background: #cfc;
+}
+
+.note:nth-child(3n) a {
+  position: relative;
+  top: -5px;
+  background: #ccf;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  color: black;
+}

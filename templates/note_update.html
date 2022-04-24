@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Note Editing
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <H1>Note Editing</H1>
+    <div class="note alert alert-info">
+
+        <form method="POST">
+            <p><i>Title:</i></p>
+            <input type="text" name="title" id="title" class="text form-control" value="{{ note.title }}"><br>
+            <p><I>Main text:</I></p>
+
+            <textarea id="summernote" name="editordata">{{ note.text |safe }}</textarea>
+            <input type="submit" class="btn btn-success" value="Edit">
+
+            <!-- <textarea name="text" id="text" class="text form-control"></textarea><br> -->
+
+            <script>
+                $(document).ready(function () {
+                    $('#summernote').summernote();
+                });
+            </script>
+
+            <script>
+                $('#summernote').summernote({
+                    toolbar: [
+                        // [groupName, [list of button]]
+                        ['style', ['style']],
+                        //   ['fontname', ['fontname']],
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        //   ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['fontsize', ['fontsize']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']]
+                    ]
+                });
+            </script>
+
+        </form>
+
+
+
+    </div>
+</div>
+{% endblock %}

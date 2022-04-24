@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All Notes
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <div class="container d-flex justify-content-between ">
+        <H1>All Notes </H1>
+        <form class="form-inline my-2 my-lg-0">
+            <input type="search" class="form-control mr-sm-2" placeholder="Put key words" name="q"
+                value="{{ request.args.get('q', '') }}">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    {% if notes|length > 0 %}
+    <!-- На вход получаем список, который нужно перебрать -->
+    {% for el in notes %}
+
+    <div class="notes">
+        <div class="note alert alert-info">
+            <div class="text">
+                <p><b>{{ el.title }}</b></p>
+                <p>{{ el.date.date() }} </p>
+            </div>
+            <a href="/notes/{{ el.note_id }}" class="btn btn-warning"> <b>Watch</b> </a>
+        </div>
+    </div>
+
+    {% endfor %}
+    {% else: %}
+    <p>There is no notes here..</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}

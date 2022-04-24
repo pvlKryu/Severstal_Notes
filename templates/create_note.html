@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create Note
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <H1 align="center" >Make It Easy!</H1>
+    <div class="note alert alert-info">
+        <form method="POST">
+            <p><i>Title:</i></p>
+            <input type="text" name="title" id="title" class="text form-control"><br>
+            <p><I>Main text:</I></p>
+
+            <textarea id="summernote" name="editordata" class="text"></textarea>
+            <input type="submit" class="btn btn-success" value="Create">
+
+            <script>
+                $(document).ready(function () {
+                    $('#summernote').summernote();
+                });
+            </script>
+
+            <script>
+                $('#summernote').summernote({
+                    toolbar: [
+                        // [groupName, [list of button]]
+                        ['style', ['style']],
+                        //   ['fontname', ['fontname']],
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        //   ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['fontsize', ['fontsize']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']]
+                    ]
+                });
+            </script>
+
+        </form>
+    </div>
+
+</div>
+{% endblock %}
