@@ -14,14 +14,21 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+
+  /* background-image: url('/static/images/logs2.jpeg');
+  background-size: cover; */
+  background-color: #b4b5b8;
+ 
 }
+
+
 
 .text {
   font-family: 'Reenie Beanie';
   font-size: 2rem;
   max-width: auto;
   text-align: justify;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .note {
@@ -68,4 +75,15 @@ footer {
   justify-content: center;
   padding: 5px;
   color: black;
+}
+
+.index_note{
+
+  /* сверху | горизонтально | снизу */
+  margin: 5em auto 3em;
+ 
+  max-width: 50%;
+  padding: auto;
+  
+  text-align: center;
 }
