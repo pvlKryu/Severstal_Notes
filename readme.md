@@ -1,5 +1,8 @@
+
+### You can try here: http://164.92.164.72:5000/home
 ## About "Severtal Notes"
 This is a simple Python-Flask project for making e-notes created as a test task for an internship at the Severstal company. 
+
 ## Functional
 Using this web application you can create, edit, print and delete notes. Also there is a page where you can view all of your notes. Besides, you can quickly search for the note you need using keywords.
 <p> Note editor is included. So, you can choose different fonts, styles, fontsizes, colors etc. </p>
