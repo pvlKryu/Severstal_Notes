@@ -2,8 +2,6 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy  # Подключение БД
 from datetime import date, datetime
 from werkzeug.utils import redirect  # Импорт функции реального времени
-from sqlalchemy import func, text
-# import bleach  # для защиты входных данных от "злых" скриптов
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///notes.db'  # Создаем БД
@@ -19,6 +17,8 @@ class Note(db.Model):  # создаем класс Заметка
     def __repr__(self):  # По запросу будет выдаваться объект + ID
         return '<Note %r>' % self.id
 
+### Определяем маршруты ###
+
 
 @app.route('/')
 @app.route('/home')
@@ -31,16 +31,10 @@ def about():
     return render_template("about.html")
 
 
-@app.route('/base')
-def base():
-    return render_template("base.html")
-
-
 @app.route('/create_note', methods=['POST', 'GET'])
 def create_note():
     if request.method == "POST":
         title = request.form['title']  # Заполняем поля из формы
-        # text = request.form['text']
         text = request.form['editordata']
         # Создаем объект, заполняем поля, передавая переменные
         note = Note(title=title, text=text)
@@ -55,7 +49,6 @@ def create_note():
         except:  # На случай ошибки
             return render_template("create_note.html")
         # traceback.format_exc() # Код ошибки
-
     else:
         return render_template("create_note.html")
 
@@ -107,7 +100,6 @@ def notes_update(note_id):
             return "There is a mistake while note editing"
     else:
         return render_template("note_update.html", note=note)
-
 
 # @app.route('/healthy')
 # def healthy():

@@ -15,10 +15,9 @@
             <p>{{ note.date.date() }} </p>
         </div>
 
-
-        <a href="/notes/{{ note.note_id }}/del" class="btn btn-warning"> <b>Delete</b> </a>
-        <a href="/notes/{{ note.note_id }}/update" class="btn btn-warning"> <b>Edit</b> </a>
-        <a href="#" class="btn btn-warning" onClick="window.print()"> <b>Print</b> </a>
+        <a href="/notes/{{ note.note_id }}/del" class="btn btn-warning noPrint"> <b>Delete</b> </a>
+        <a href="/notes/{{ note.note_id }}/update" class="btn btn-warning noPrint"> <b>Edit</b> </a>
+        <a href="#" class="btn btn-warning noPrint" onClick="window.print()"> <b>Print</b> </a>
 
     </div>
 </div>

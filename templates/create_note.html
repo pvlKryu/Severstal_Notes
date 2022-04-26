@@ -6,31 +6,31 @@ Create Note
 
 {% block body %}
 <div class="container mt-5">
-    <H1 align="center" >Make It Easy!</H1>
-    <div class="note alert alert-info">
+    <H1 align="center">New note</H1>
+    <div class="note alert alert-info ">
         <form method="POST">
-            <p><i>Title:</i></p>
+            <p class="text"><i><b>Title:</b></i></p>
             <input type="text" name="title" id="title" class="text form-control"><br>
-            <p><I>Main text:</I></p>
+            <p class="text"><I><b>Main text:</b></I></p>
 
             <textarea id="summernote" name="editordata" class="text"></textarea>
-            <input type="submit" class="btn btn-warning" value="Create">
-            
+            <b></b><input type="submit" class="btn btn-warning" value="Create">
 
+            <!-- Скрипты для работы Summernote Editor -->
             <script>
                 $(document).ready(function () {
                     $('#summernote').summernote();
                 });
             </script>
-
+            <!-- Выбор инструментов Summernote Editor -->
             <script>
                 $('#summernote').summernote({
                     toolbar: [
                         // [groupName, [list of button]]
                         ['style', ['style']],
-                        //   ['fontname', ['fontname']],
+                        ['fontname', ['fontname']],
                         ['style', ['bold', 'italic', 'underline', 'clear']],
-                        //   ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
                         ['fontsize', ['fontsize']],
                         ['color', ['color']],
                         ['para', ['ul', 'ol', 'paragraph']],

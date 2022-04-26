@@ -6,33 +6,32 @@ Note Editing
 
 {% block body %}
 <div class="container mt-5">
-    <H1>Note Editing</H1>
+    <H1 align="center">Note Editing</H1>
     <div class="note alert alert-info">
 
         <form method="POST">
-            <p><i>Title:</i></p>
+            <p class="text"><i><b>Title:</b></i></p>
             <input type="text" name="title" id="title" class="text form-control" value="{{ note.title }}"><br>
-            <p><I>Main text:</I></p>
+            <p class="text"><I><b>Main text:</b></I></p>
 
             <textarea id="summernote" name="editordata">{{ note.text |safe }}</textarea>
             <input type="submit" class="btn btn-success" value="Edit">
 
-            <!-- <textarea name="text" id="text" class="text form-control"></textarea><br> -->
-
+            <!-- Скрипты для работы Summernote Editor -->
             <script>
                 $(document).ready(function () {
                     $('#summernote').summernote();
                 });
             </script>
-
+            <!-- Выбор инструментов Summernote Editor -->
             <script>
                 $('#summernote').summernote({
                     toolbar: [
                         // [groupName, [list of button]]
                         ['style', ['style']],
-                        //   ['fontname', ['fontname']],
+                        ['fontname', ['fontname']],
                         ['style', ['bold', 'italic', 'underline', 'clear']],
-                        //   ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
                         ['fontsize', ['fontsize']],
                         ['color', ['color']],
                         ['para', ['ul', 'ol', 'paragraph']],
@@ -40,10 +39,7 @@ Note Editing
                     ]
                 });
             </script>
-
         </form>
-
-
 
     </div>
 </div>
