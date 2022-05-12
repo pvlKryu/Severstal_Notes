@@ -1,5 +1,3 @@
-
-### You can try here: http://164.92.164.72:5000/home
 ## About "Severtal Notes"
 This is a simple Python-Flask project for making e-notes created as a test task for an internship at the Severstal company. 
 
