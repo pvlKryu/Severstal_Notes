@@ -20,3 +20,17 @@ Using this web application you can create, edit, print and delete notes. Also th
  3. SQLAlchemy (https://www.sqlalchemy.org/)
  4. Summernote editor (https://summernote.org/)
  5. Bootstrap (https://getbootstrap.com/)
+
+## Outpoot examples <br>
+### Main page:<br>
+![image](https://user-images.githubusercontent.com/57821178/169523520-f9765115-5fb8-4257-abee-6184ec53caaa.png)
+### Creating new note page:<br>
+![image](https://user-images.githubusercontent.com/57821178/169523744-7217d4be-d65d-4c39-8615-c5f354e4c56a.png)
+### Notes page:<br>
+![image](https://user-images.githubusercontent.com/57821178/169523873-77f1e0b7-96e5-4082-85cb-35e3f24d57f5.png)
+### Notes example:<br>
+![image](https://user-images.githubusercontent.com/57821178/169523959-f5fa4e40-04ef-4220-98b9-500103e9d384.png)
+### Mobile version page:<br>
+![image](https://user-images.githubusercontent.com/57821178/169524233-3f34e2bb-27c3-42e9-9f77-28c01a385312.png)
+
+
